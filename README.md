@@ -1,6 +1,6 @@
 # fast-css-loader
 
-Blazing fast css loader for webpack (about 10 times faster than [css-loader](https://github.com/webpack-contrib/css-loader) when process large css files)
+Blazingly fast css loader for webpack (about 10 times faster than [css-loader](https://github.com/webpack-contrib/css-loader) when process large css files)
 
 ## install
 
@@ -13,10 +13,14 @@ npm install fast-css-loader --save-dev
 fast-css-loader has high performance when process large css file, here is an example 
 when process a **24200+ lines** css file:
 
-- css-loader: `~2164ms`
-- fast-css-loader: `~152ms`
+```text
+-------------------------------------
+       CSS_LOADER COST: 1644 ms
+  FAST_CSS_LOADER COST: 116 ms
+-------------------------------------
+```
 
-![fast-css-loader](https://user-images.githubusercontent.com/4136679/39661927-cf76bea2-508c-11e8-85c3-4482e6916a12.gif)
+![image](https://user-images.githubusercontent.com/4136679/39662320-4615baf4-5092-11e8-8dc6-82e6c4706604.png)
 
 ### Why faster?
 
