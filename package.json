@@ -1,0 +1,67 @@
+{
+  "name": "fast-css-loader",
+  "version": "1.0.0",
+  "description": "blazing fast css loader for webpack",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "standard --fix && npm-ensure -t deps",
+    "test": "npm run lint && npm run test-local",
+    "test-local": "mocha test/**/*.test.js",
+    "test-cov": "nyc npm run test-local",
+    "ci": "npm run lint && npm run test-cov",
+    "beta": "npm test && git release $npm_package_version && npm publish --tag beta",
+    "release": "npm test && npm-ensure -t changelog && git release $npm_package_version && npm publish",
+    "precommit": "standard && npm-ensure -t deps"
+  },
+  "ensure": {
+    "deps": {
+      "checkDirs": [
+        "lib/**/*",
+        "bin/*"
+      ]
+    }
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "json",
+      "lcov"
+    ]
+  },
+  "standard": {
+    "global": [
+      "describe",
+      "it",
+      "beforeEach",
+      "afterEach"
+    ],
+    "ignore": [
+      "/test"
+    ]
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0",
+    "parse-import": "^2.0.0"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "husky": "0.x",
+    "mini-css-extract-plugin": "^0.4.0",
+    "mocha": "^3.0.2",
+    "npm-ensure": "^1.0.0",
+    "nyc": "11.x",
+    "standard": "^8.2.0",
+    "webpack": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yibn2008/fast-css-loader.git"
+  },
+  "keywords": [
+    "fast-css-loader"
+  ],
+  "author": "zoujie.wzj",
+  "license": "MIT"
+}

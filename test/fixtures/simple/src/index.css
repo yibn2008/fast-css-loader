@@ -1,0 +1,8 @@
+@import "./lib/style/other.css" /* comments will be skipped*/ screen and (orientation: landscape);
+
+/* comments will be keepped (@import xxx; url("xxx.css") */
+h1 {
+  background: url("./lib/style/image.png")no-repeat;
+  /* comments will be keepped */
+  color: #111;
+}
