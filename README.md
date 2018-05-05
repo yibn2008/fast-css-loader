@@ -10,7 +10,7 @@ npm install fast-css-loader --save-dev
 
 ## VS css-loader
 
-fast-css-loader has high performance when process large css file, here is an example 
+fast-css-loader has higher performance when processing large css files, here is an example 
 when process a **24200+ lines** css file:
 
 ```text
